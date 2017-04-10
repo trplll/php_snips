@@ -166,4 +166,58 @@ $a3=array("a"=>"red","b"=>"black","h"=>"yellow");
 $result=array_diff($a1,$a2,$a3);
 print_r($result);
 
+#Create an array by using the elements from one "keys" array and one "values" array:
+#---------------------------------------------------------------------------------------------------------------------
+$fname=array("Peter","Ben","Joe");
+$age=array("35","37","43");
+
+$c=array_combine($fname,$age);
+print_r($c);
+
+#Count all the values of an array:
+#---------------------------------------------------------------------------------------------------------------------
+$a=array("A","Cat","Dog","A","Dog");
+print_r(array_count_values($a));
+
+#Compare the values of two arrays, and return the differences:
+#---------------------------------------------------------------------------------------------------------------------
+$a1=array("a"=>"red","b"=>"green","c"=>"blue","d"=>"yellow");
+$a2=array("e"=>"red","f"=>"green","g"=>"blue");
+
+$result=array_diff($a1,$a2);
+print_r($result);
+
+#Compare the values of three arrays, and return the differences:
+#---------------------------------------------------------------------------------------------------------------------
+$a1=array("a"=>"red","b"=>"green","c"=>"blue","d"=>"yellow");
+$a2=array("e"=>"red","f"=>"black","g"=>"purple");
+$a3=array("a"=>"red","b"=>"black","h"=>"yellow");
+
+$result=array_diff($a1,$a2,$a3);
+print_r($result);
+
+#Compare the keys of two arrays, and return the differences:
+#---------------------------------------------------------------------------------------------------------------------
+$a1=array("a"=>"red","b"=>"green","c"=>"blue");
+$a2=array("a"=>"red","c"=>"blue","d"=>"pink");
+
+$result=array_diff_key($a1,$a2);
+print_r($result);
+
+#Compare the keys of two indexed arrays, and return the differences:
+#---------------------------------------------------------------------------------------------------------------------
+$a1=array("red","green","blue","yellow");
+$a2=array("red","green","blue");
+
+$result=array_diff_key($a1,$a2);
+print_r($result);
+
+#Compare the keys of three arrays, and return the differences:
+#---------------------------------------------------------------------------------------------------------------------
+$a1=array("a"=>"red","b"=>"green","c"=>"blue");
+$a2=array("c"=>"yellow","d"=>"black","e"=>"brown");
+$a3=array("f"=>"green","c"=>"purple","g"=>"red");
+
+$result=array_diff_key($a1,$a2,$a3);
+print_r($result);
 
